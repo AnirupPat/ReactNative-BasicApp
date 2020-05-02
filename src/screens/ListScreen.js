@@ -5,7 +5,7 @@ import { FlatList } from 'react-native-gesture-handler';
 const ListScreen = () => {
     const friends = [
         {
-            name: 'Sangram'
+            name: 'Sangram',
         },{
             name: 'Gangotree'
         },{
@@ -27,15 +27,20 @@ const ListScreen = () => {
     return (
         // we have used object destructuring here
         <FlatList 
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            keyExtractor={ (friend) => friend.name }
             data={friends} 
             renderItem={({ item }) => {
-            return <Text>{item.name}</Text>
+            return <Text style={styles.textStyle}>{item.name}</Text>
         }}/>
     );
 };
 
 const styles = StyleSheet.create({
-
+    textStyle: {
+        marginVertical: 20
+    }
 });
 
 export default ListScreen
