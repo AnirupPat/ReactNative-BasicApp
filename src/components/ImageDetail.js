@@ -1,11 +1,13 @@
 import React from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native';
 
-const ImageDetail = ( props ) => {
+// Object destructuring of props
+const ImageDetail = ( {imageSource, title, imageScore} ) => {
     return (
     <View>
-        <Image source={require('../../assets/beach.jpg')} />
-        <Text>Image Detail of {props.title}</Text>
+        <Image source={imageSource} />
+        <Text>Image Detail of {title}</Text>
+        <Text>Image Score - {imageScore}</Text>
     </View>
     );
 };
