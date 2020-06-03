@@ -40,6 +40,7 @@ const ListScreen = () => {
             // showsHorizontalScrollIndicator={false}
             keyExtractor={ (friend) => friend.name }
             data={friends} 
+            // here we are doing obj destructuring...
             renderItem={({ item }) => {
             return <Text style={styles.textStyle}>{item.name} - Age {item.age}</Text>
         }}/>
