@@ -2,19 +2,20 @@ import React, { useState } from 'react';
 import { View, StyleSheet, Text, TextInput } from 'react-native';
 
 const TextScreen = () => {
-    const [name, setName] = useState('')
+    const [password, setPassword] = useState('')
     return (
         <View>
+            <Text>Enter Password:</Text>
             <TextInput 
                 autoCapitalize="none"
                 autoCorrect={false}
                 style={style.input}
-                value={name}
+                value={password}
                 onChangeText={(newValue) => {
-                    setName(newValue)
+                    setPassword(newValue)
                 }}
             />
-            <Text>My name is: {name}</Text>
+            {password.length < 4 ? <Text>Password must be atleast 4 char</Text> : null}
         </View>
     )
 };
