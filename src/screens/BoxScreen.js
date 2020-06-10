@@ -15,8 +15,8 @@ const style = StyleSheet.create({
     viewStyle: {
         borderWidth: 1,
         borderColor: 'black',
-       // alignItems: "center",
-       justifyContent: "space-around",
+        alignItems: "center",
+       //justifyContent: "space-around",
         flexDirection: "column",
         height: 200
     },
@@ -24,19 +24,20 @@ const style = StyleSheet.create({
         borderWidth: 5,
         borderColor: 'red',
         height: 50,
-        flex: 4
+      //  flex: 4
     },
     textTwoStyle: {
         borderWidth: 5,
         borderColor: 'red',
         height: 50,
-        flex: 4
+        alignSelf: "stretch"
+       // flex: 4
     },
     textThreeStyle: {
         borderWidth: 5,
         borderColor: 'red',
         height: 50,
-        flex: 2
+       // flex: 2
     }
 });
 
